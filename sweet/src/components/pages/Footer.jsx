@@ -4,7 +4,7 @@ import "../../styles/footer.css";
 export default function Footer() {
   return (
     <footer>
-      <ul className="footer-left">
+      <ul className="footer-left" id="menu">
         <li>
           <a href="/" target="blank" className="text-focus-in">
             Terminos & Condiciones
@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <ul className="footer-right">
+      <ul className="footer-right" id="social-media">
         <li>
           <a href="/" target="blank" className="text-focus-in">
             Facebook

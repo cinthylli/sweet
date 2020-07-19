@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+a:hover,
+a:active {
+  border: 7px  solid;
+  border-image-source: linear-gradient(
+    to right,
+     #6d238a,
+     #42238a
+  );
+  border-image-slice: 1;
+  padding: 4px;
+}
+
 /* Animaciones */
 
 .text-pop-up-top {
