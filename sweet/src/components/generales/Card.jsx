@@ -13,8 +13,9 @@ export default function Card(props) {
         />
       </div>
       <div className="card-subtitle">
-        <span>{props.subtitle || "Lorem ipsum dolor"}</span>,
-        <span>{props.subtitle2 || "Lorem ipsum dolor"}</span>
+        <span>
+          {` ${props.subtitle2}, ${props.subtitle2}` || "Lorem ipsum dolor"}
+        </span>
       </div>
       <div className="card-description">
         <p>

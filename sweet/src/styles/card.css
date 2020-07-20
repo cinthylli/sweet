@@ -65,8 +65,8 @@ p {
   /*Chrome10-25,Safari5.1-6*/
   background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
   z-index: -1;
 }
 
@@ -88,8 +88,8 @@ p {
   /*Chrome10-25,Safari5.1-6*/
   background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-  filter: blur(15px);
-  -webkit-filter: blur(15px);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
   z-index: -1;
 }
 .card-subtitle span {
@@ -109,7 +109,7 @@ p {
   align-items: center;
 }
 .card-category .material-icons {
-  color: #210358;
+  color: #2e0c03;
   margin: 4px;
 }
 
