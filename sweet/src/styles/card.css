@@ -49,7 +49,7 @@ p {
 
 .card-container::after {
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: 0px;
   content: " ";
   background: red;
@@ -65,14 +65,14 @@ p {
   /*Chrome10-25,Safari5.1-6*/
   background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
   z-index: -1;
 }
 
 .card-container:hover::after {
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: 0px;
   content: " ";
   background: red;
@@ -90,11 +90,12 @@ p {
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
   filter: blur(10px);
   -webkit-filter: blur(10px);
-  z-index: -1;
+  z-index: -100;
 }
 .card-subtitle span {
   font-family: "Concert One", cursive;
   text-items: left;
+  color: #8a2387;
 }
 .card-description p {
   padding: 0 8px;
@@ -109,8 +110,8 @@ p {
   align-items: center;
 }
 .card-category .material-icons {
-  color: #2e0c03;
-  margin: 4px;
+  color: #8a2387;
+  margin: 1px;
 }
 
 .card-image img {

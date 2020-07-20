@@ -21,7 +21,7 @@ export default class Cards extends Component {
             return (
               <Card
                 className="item"
-                title={hotel.title}
+                title={hotel.name}
                 image={hotel.photo}
                 subtitle={hotel.city}
                 subtitle2={hotel.country}
