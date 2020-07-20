@@ -4,6 +4,7 @@ import Search from "./Search";
 import Cards from "../pages/Cards";
 import "../../styles/home.css";
 import Curves from "../generales/Curves";
+
 export default class Home extends Component {
   state = {
     form: {
@@ -23,6 +24,45 @@ export default class Home extends Component {
       },
     });
   };
+
+  transformDate = (date) => {
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    let days = [
+      "Lunes",
+      "Martes",
+      "Miercoles",
+      "Jueves",
+      "Viernes",
+      "Sabado",
+      "Domingo",
+    ];
+    let dateString = "",
+      month = "",
+      day = "",
+      year = "";
+    month = months[date.getMonth()];
+    day = days[date.getDay()];
+    year = date.getYear();
+    dateString = `${day}, del ${month} del ${year}`;
+
+    console.log(dateString);
+    return dateString;
+  };
+
   render() {
     return (
       <div>
@@ -32,10 +72,11 @@ export default class Home extends Component {
           {this.state.form.initialDate !== "" &&
           this.state.form.finalDate !== ""
             ? `Prepárate para disfrutar de los mejores hoteles entre el ${this.state.form.initialDate} y el ${this.state.form.finalDate}.`
-            : ""}<br/>
-          {this.state.form.country!== "" 
+            : null}
+          <br />
+          {this.state.form.country !== ""
             ? `Qué esperas para conocer ${this.state.form.country} y disfrutar todo lo que trae para ti.`
-            : ""}
+            : null}
         </p>
         <Search onChange={this.handleChange} formValues={this.state.form} />
         <Cards />

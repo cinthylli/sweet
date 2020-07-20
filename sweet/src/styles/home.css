@@ -5,8 +5,11 @@ p {
 
 .home-title {
   font-family: "Pacifico", "Sacramento", cursive;
+  color: #4e4b4e;
+  margin-bottom: 0;
 }
 .home-subtitle {
   font-family: "Pacifico", "Sacramento", cursive;
   font-size: medium;
+  color: #575557;
 }
