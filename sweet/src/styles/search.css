@@ -7,16 +7,10 @@
   height: 30px;
 }
 
-.check-out-icon {
-  background-image: url("../../public/icons/salida30.png");
-}
 
-.money-icon {
-  background-image: url("../../public/icons/presupuesto30.png");
-}
 
 .material-icons {
-  color: gray;
+  color: #746574;
 }
 
 .header-search {
@@ -29,5 +23,8 @@
   display: flex;
   flex-direction: row;
 }
-.header-input-container {
+
+input,
+select span {
+  color: #746574;
 }

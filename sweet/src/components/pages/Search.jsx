@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Split from "../generales/Split";
-// import "../../styles.search.css";
+// import "../../styles/search.css"
 
 export default class Search extends Component {
   initialDateControl = () => {
