@@ -48,6 +48,7 @@ h1, h2, h3,h4,h5,h6,a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  min-width: 230px;
 }
 .header-search #form-search .header-input-container {
   /* background-color: rgba(207, 128, 38, 0.925); */
