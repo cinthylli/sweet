@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+h1, h2, h3,h4,h5,h6,a {
+  font-family: 'Concert One', cursive;
+}
+
 /* .register-icon {
   background-image: url("public/icons/ingreso30.png");
   background-repeat: no-repeat;
@@ -100,6 +104,7 @@ input {
   padding: 0 8px;
   width: 125px;
   background-color: transparent;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .initial-date,
@@ -121,11 +126,11 @@ input {
 .select-country {
   padding: 0 8px;
   width: 105px;
-  background-color: transparent;
+  background-color: transparent;font-family: 'Roboto Condensed', sans-serif;
 }
 
 .select-price {
   padding: 0 8px;
   width: 70px;
-  background-color: transparent;
+  background-color: transparent;font-family: 'Roboto Condensed', sans-serif;
 }
