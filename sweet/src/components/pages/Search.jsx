@@ -16,7 +16,7 @@ export default class Search extends Component {
             <img src="../../../public/icons/ingreso30.png" alt="" />
           </span> */}
           <div className="header-input-container initial-date">
-            <i class="material-icons">login</i>
+            <i className="material-icons">login</i>
             <label htmlFor="initial_date" className="register-icon"></label>
             <input
               type="date"
@@ -27,12 +27,12 @@ export default class Search extends Component {
             />
           </div>
           <div className="header-input-container final-date">
-            <i class="material-icons">exit_to_app</i>
+            <i className="material-icons">exit_to_app</i>
             <label htmlFor="final_date"></label>
             <input type="date" name="final_date" id="final_date" />
           </div>
           <div className="header-input-container search">
-            <i class="material-icons">search</i>
+            <i className="material-icons">search</i>
             <label htmlFor="search"></label>
             <input
               className="input-search"
@@ -45,7 +45,7 @@ export default class Search extends Component {
             />
           </div>
           <div className="header-input-container country">
-            <i class="material-icons">place</i>
+            <i className="material-icons">place</i>
             <label htmlFor="country"></label>
             <select name="country" id="country" className="select-country">
               <option value="Colombia">Colombia</option>
@@ -55,7 +55,7 @@ export default class Search extends Component {
             </select>
           </div>
           <div className="header-input-container price">
-            <i class="material-icons">monetization_on</i>
+            <i className="material-icons">monetization_on</i>
             <label htmlFor="price"></label>
             <select name="price" id="price" className="select-price">
               <option value="1">$</option>

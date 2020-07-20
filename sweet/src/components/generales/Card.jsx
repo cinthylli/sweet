@@ -13,7 +13,8 @@ export default function Card(props) {
         />
       </div>
       <div className="card-subtitle">
-        <h3>{props.subtitle || "Lorem ipsum dolor"}</h3>
+        <span>{props.subtitle || "Lorem ipsum dolor"}</span>,
+        <span>{props.subtitle2 || "Lorem ipsum dolor"}</span>
       </div>
       <div className="card-description">
         <p>
@@ -23,17 +24,17 @@ export default function Card(props) {
       </div>
       <div className="card-categories">
         <div className="card-category">
-          <i class="material-icons">{props.icon1 || "exit_to_app"}</i>{" "}
+          <i className="material-icons">{props.icon1 || "exit_to_app"}</i>{" "}
           {props.qty_icon1 || "4"}
         </div>
         <div className="card-category">
-          <i class="material-icons">{props.icon2 || "exit_to_app"}</i>{" "}
+          <i className="material-icons">{props.icon2 || "exit_to_app"}</i>{" "}
           {props.qty_icon2 || "4"}
         </div>
-        <div className="card-category">
-          <i class="material-icons">{props.icon3 || "exit_to_app"}</i>
+        {/* <div className="card-category">
+          <i className="material-icons">{props.icon3 || "exit_to_app"}</i>
           {props.qty_icon3 || "4"}
-        </div>
+        </div> */}
       </div>
     </article>
   );
