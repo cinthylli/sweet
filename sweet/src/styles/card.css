@@ -36,6 +36,25 @@ p {
   flex: 1 0 300px;
   box-sizing: border-box;
   margin: 1rem 0.25em;
+  border: transparent;
+  border-radius: 8px;
+  color: #210358;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  position: relative;
+  background-color: white;
+}
+
+.card-container::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: " ";
+  background: red;
+  width: 99%;
+  height: 99%;
   background: #1fa2ff;
   /*fallbackforoldbrowsers*/
   background: #1fa2ff;
@@ -46,13 +65,9 @@ p {
   /*Chrome10-25,Safari5.1-6*/
   background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-  border: transparent;
-  border-radius: 8px;
-  color: white;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  filter: blur(5px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
 }
 .card-subtitle span {
   font-family: "Concert One", cursive;
@@ -71,7 +86,7 @@ p {
   align-items: center;
 }
 .card-category .material-icons {
-  color: white;
+  color: #210358;
   margin: 4px;
 }
 
