@@ -6,14 +6,19 @@
 
 a:hover,
 a:active {
-  border: 7px  solid;
-  border-image-source: linear-gradient(
-    to right,
-     #6d238a,
-     #42238a
-  );
+  border: 7px solid;
+  border-image-source: linear-gradient(to right, #6d238a, #42238a);
   border-image-slice: 1;
   padding: 4px;
+}
+
+/* Cursor */
+
+.custom-cursor {
+  cursor: 
+  /* url("//cybmeta.com/wp-content/uploads/2015/06/hal-angry-birds-cursor.png"), */
+    /* url("//img2.freepng.es/20171127/7db/red-swirl-lollipop-transparent-png-clip-art-image-5a1c9dad7cbdf2.466447871511824813511.jpg"), */
+    pointer;
 }
 
 /* Animaciones */

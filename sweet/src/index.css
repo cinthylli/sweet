@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* .register-icon {
+  background-image: url("public/icons/ingreso30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+
+.check-out-icon {
+  background-image: url("public/icons/salida30.png");
+}
+
+.money-icon {
+  background-image: url("public/icons/presupuesto30.png");
+} */
+
+.material-icons {
+  color: gray;
+}
+
+.header-search {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#form-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.header-search #form-search .header-input-container {
+  /* background-color: rgba(207, 128, 38, 0.925); */
+  margin-left: 5px;
+
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  border: 1px solid #dfe1e5;
+}
+
+.header-search #form-search .header-input-container:hover {
+  box-shadow: 0 1px 6px #20212447;
+  border-color: #dfe1e5;
+}
+
+.header-input-container input,
+.header-input-container select {
+  height: 40px;
+  border: none;
+  outline: none;
+}
+
+
+.header-input-container .search-icon {
+  background-image: url("https://pngimage.net/wp-content/uploads/2018/06/lupa-de-pesquisa-png-6.png");
+  background-repeat: none;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+
+.micro-icon {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e8/Google_mic.svg");
+  background-repeat: none;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+input {
+  padding: 0 8px;
+  width: 125px;
+  background-color: transparent;
+}
+
+.initial-date,
+.final-date {
+  width: 185px;
+}
+
+.price {
+  width: 100px;
+}
+.search {
+  width: 170px;
+}
+
+.country {
+  width: 141px;
+}
+
+.select-country {
+  padding: 0 8px;
+  width: 105px;
+  background-color: transparent;
+}
+
+.select-price {
+  padding: 0 8px;
+  width: 70px;
+  background-color: transparent;
 }

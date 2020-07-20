@@ -1,0 +1,33 @@
+.register-icon {
+  background-image: url("../../public/icons/ingreso30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+
+.check-out-icon {
+  background-image: url("../../public/icons/salida30.png");
+}
+
+.money-icon {
+  background-image: url("../../public/icons/presupuesto30.png");
+}
+
+.material-icons {
+  color: gray;
+}
+
+.header-search {
+  margin-top: 20px;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+#form-search {
+  display: flex;
+  flex-direction: row;
+}
+.header-input-container {
+}
