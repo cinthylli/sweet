@@ -9,13 +9,15 @@ export default class Search extends Component {
     console.log(dateInput);
   };
 
+  handleChange = (e) => {
+    console.log(e)
+  }
+
   render() {
     return (
       <section className="header-search">
         <form id="form-search">
-          {/* <span className="header-search-icon">
-            <img src="../../../public/icons/ingreso30.png" alt="" />
-          </span> */}
+         
           <div className="header-input-container initial-date">
             <i className="material-icons">login</i>
             <label htmlFor="initial_date" className="register-icon"></label>
@@ -24,6 +26,7 @@ export default class Search extends Component {
               name="initial_date"
               id="initial_date"
               min={this.today}
+              onChange={this.handleChange}
               autoFocus
             />
           </div>
