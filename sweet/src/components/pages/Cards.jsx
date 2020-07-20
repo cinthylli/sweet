@@ -27,7 +27,7 @@ export default class Cards extends Component {
                 description={hotel.description}
                 icon1="king_bed"
                 qty_icon1={hotel.rooms}
-                icon2="attach_money"
+                icon2="monetization_on"
                 qty_icon2={hotel.price}
                 key={uuid()}
               />

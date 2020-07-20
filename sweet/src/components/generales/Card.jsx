@@ -26,11 +26,11 @@ export default function Card(props) {
       <div className="card-categories">
         <div className="card-category">
           <i className="material-icons">{props.icon1 || "exit_to_app"}</i>{" "}
-          {props.qty_icon1 || "4"}
+          <span>{props.qty_icon1 || "4"}</span>
         </div>
         <div className="card-category">
           <i className="material-icons">{props.icon2 || "exit_to_app"}</i>{" "}
-          {props.qty_icon2 || "4"}
+          <span>{props.qty_icon2 === 1 ? ' $ ' : props.qty_icon2 === 2 ? '$$' : props.qty_icon2 === 3 ? '$$$' : "$$$$" || '  '}</span>
         </div>
         {/* <div className="card-category">
           <i className="material-icons">{props.icon3 || "exit_to_app"}</i>

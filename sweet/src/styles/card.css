@@ -38,7 +38,7 @@ p {
   margin: 1rem 0.25em;
   border: transparent;
   border-radius: 8px;
-  color: #210358;
+  color: #2d2c2e;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -92,6 +92,10 @@ p {
   -webkit-filter: blur(8px);
   z-index: -100;
 }
+
+.card-title {
+  color: #e1ae56;
+}
 .card-subtitle span {
   font-family: "Concert One", cursive;
   text-items: left;
@@ -99,8 +103,12 @@ p {
 }
 .card-description p {
   padding: 0 8px;
+  color: #746574;
 }
 
+.card-categories {
+  margin-bottom: 4px;
+}
 .card-categories,
 .card-category {
   display: flex;
@@ -114,6 +122,11 @@ p {
   margin: 1px;
 }
 
+.card-category span {
+  color: #746574;
+  font-family: "Concert One", cursive;
+  font-weight: bold;
+}
 .card-image img {
   width: 350px;
 }
