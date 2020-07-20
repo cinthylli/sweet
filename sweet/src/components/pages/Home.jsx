@@ -8,13 +8,34 @@ import Curves from "../generales/Curves";
 export default class Home extends Component {
   state = {
     form: {
-      initialDate: "",
+      initialDate: new Date(),
+      initialDateHumanReadable: "",
       finalDate: "",
+      finalDateHumanReadable: "",
       country: "",
       price: "",
       search: "",
     },
   };
+
+  options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  componentDidUpdate(prevState, prevProps) {
+    let fecha = new Date();
+    let initialDateHumanReadable = fecha.toLocaleDateString(
+      "es-ES",
+      this.options
+    );
+
+    console.log(initialDateHumanReadable);
+
+    console.log(initialDateHumanReadable);
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -23,44 +44,6 @@ export default class Home extends Component {
         [e.target.name]: e.target.value,
       },
     });
-  };
-
-  transformDate = (date) => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    let days = [
-      "Lunes",
-      "Martes",
-      "Miercoles",
-      "Jueves",
-      "Viernes",
-      "Sabado",
-      "Domingo",
-    ];
-    let dateString = "",
-      month = "",
-      day = "",
-      year = "";
-    month = months[date.getMonth()];
-    day = days[date.getDay()];
-    year = date.getYear();
-    dateString = `${day}, del ${month} del ${year}`;
-
-    console.log(dateString);
-    return dateString;
   };
 
   render() {
