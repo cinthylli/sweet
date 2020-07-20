@@ -10,14 +10,16 @@ export default class Search extends Component {
   };
 
   handleChange = (e) => {
-    console.log(e)
-  }
+    console.log({
+      name: e.target.name,
+      value: e.target.value,
+    });
+  };
 
   render() {
     return (
       <section className="header-search">
         <form id="form-search">
-         
           <div className="header-input-container initial-date">
             <i className="material-icons">login</i>
             <label htmlFor="initial_date" className="register-icon"></label>
@@ -33,7 +35,12 @@ export default class Search extends Component {
           <div className="header-input-container final-date">
             <i className="material-icons">exit_to_app</i>
             <label htmlFor="final_date"></label>
-            <input type="date" name="final_date" id="final_date" />
+            <input
+              type="date"
+              name="final_date"
+              id="final_date"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="header-input-container search">
             <i className="material-icons">search</i>
@@ -46,12 +53,18 @@ export default class Search extends Component {
               inputMode="full-width-latin"
               minLength="3"
               maxLength="60"
+              onChange={this.handleChange}
             />
           </div>
           <div className="header-input-container country">
             <i className="material-icons">place</i>
             <label htmlFor="country"></label>
-            <select name="country" id="country" className="select-country">
+            <select
+              name="country"
+              id="country"
+              className="select-country"
+              onChange={this.handleChange}
+            >
               <option value="Colombia">Colombia</option>
               <option value="Peru">Peru</option>
               <option value="Argentina">Argentina</option>
@@ -61,7 +74,12 @@ export default class Search extends Component {
           <div className="header-input-container price">
             <i className="material-icons">monetization_on</i>
             <label htmlFor="price"></label>
-            <select name="price" id="price" className="select-price">
+            <select
+              name="price"
+              id="price"
+              className="select-price"
+              onChange={this.handleChange}
+            >
               <option value="1">$</option>
               <option value="2">$$</option>
               <option value="3">$$$</option>
