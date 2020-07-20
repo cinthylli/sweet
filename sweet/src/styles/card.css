@@ -1,0 +1,78 @@
+/* @media screen and (min-width: 60em) {
+  .card {
+    flex: 0 1 calc(25% - 1em);
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
+} */
+
+@media screen and (min-width: 40em) {
+  .card {
+    max-width: calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .card {
+    max-width: calc(25% - 1em);
+  }
+}
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 52em;
+    }
+}
+
+
+h3,
+p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 calc(25% - 1em);
+  flex: 1 0 300px;
+  box-sizing: border-box;
+  margin: 1rem 0.25em;
+  background: #1fa2ff;
+  /*fallbackforoldbrowsers*/
+  background: #1fa2ff;
+  /*fallbackforoldbrowsers*/
+  background: #8a2387;
+  /*fallbackforoldbrowsers*/
+  background: -webkit-linear-gradient(to bottom, #f27121, #e94057, #8a2387);
+  /*Chrome10-25,Safari5.1-6*/
+  background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
+  /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
+  border: transparent;
+  border-radius: 8px;
+  color: white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.card-description p {
+  padding: 0 8px;
+}
+
+.card-categories,
+.card-category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card-category .material-icons {
+  color: white;
+  margin: 4px;
+}
