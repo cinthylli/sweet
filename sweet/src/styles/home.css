@@ -3,10 +3,10 @@ p {
   color: #746574;
 }
 
-.home-title{
-font-family: "Pacifico",'Sacramento', cursive;
+.home-title {
+  font-family: "Pacifico", "Sacramento", cursive;
 }
 .home-subtitle {
-  font-family: "Pacifico",'Sacramento', cursive;
-  font-size: smaller;
+  font-family: "Pacifico", "Sacramento", cursive;
+  font-size: medium;
 }
