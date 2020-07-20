@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  margin: 0.8em 5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,8 +13,14 @@ code {
     monospace;
 }
 
-h1, h2, h3,h4,h5,h6,a {
-  font-family: 'Concert One', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Concert One", cursive;
 }
 
 /* .register-icon {
@@ -81,7 +88,6 @@ h1, h2, h3,h4,h5,h6,a {
   outline: none;
 }
 
-
 .header-input-container .search-icon {
   background-image: url("https://pngimage.net/wp-content/uploads/2018/06/lupa-de-pesquisa-png-6.png");
   background-repeat: none;
@@ -105,7 +111,7 @@ input {
   padding: 0 8px;
   width: 125px;
   background-color: transparent;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .initial-date,
@@ -127,11 +133,13 @@ input {
 .select-country {
   padding: 0 8px;
   width: 105px;
-  background-color: transparent;font-family: 'Roboto Condensed', sans-serif;
+  background-color: transparent;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .select-price {
   padding: 0 8px;
   width: 70px;
-  background-color: transparent;font-family: 'Roboto Condensed', sans-serif;
+  background-color: transparent;
+  font-family: "Roboto Condensed", sans-serif;
 }

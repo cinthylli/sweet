@@ -1,10 +1,8 @@
 .App {
   text-align: center;
-  margin: 0.8em 0.4em;
+  margin: 0;
   padding: 0;
 }
-
-
 
 a:hover,
 a:active {
@@ -19,8 +17,7 @@ a:active {
 .custom-cursor {
   cursor: 
   /* url("//cybmeta.com/wp-content/uploads/2015/06/hal-angry-birds-cursor.png"), */
-    /* url("//img2.freepng.es/20171127/7db/red-swirl-lollipop-transparent-png-clip-art-image-5a1c9dad7cbdf2.466447871511824813511.jpg"), */
-    pointer;
+    /* url("//img2.freepng.es/20171127/7db/red-swirl-lollipop-transparent-png-clip-art-image-5a1c9dad7cbdf2.466447871511824813511.jpg"), */ pointer;
 }
 
 /* Animaciones */
