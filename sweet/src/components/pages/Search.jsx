@@ -3,6 +3,14 @@ import Split from "../generales/Split";
 // import "../../styles/search.css"
 
 export default class Search extends Component {
+  state = {
+    initialDate: "",
+    finalDate: "",
+    country: "",
+    price: "",
+    search: "",
+  };
+
   initialDateControl = () => {
     let dateInput = document.getElementById("initial_date");
 
@@ -10,9 +18,8 @@ export default class Search extends Component {
   };
 
   handleChange = (e) => {
-    console.log({
-      name: e.target.name,
-      value: e.target.value,
+    this.setState({
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -22,24 +29,26 @@ export default class Search extends Component {
         <form id="form-search">
           <div className="header-input-container initial-date">
             <i className="material-icons">login</i>
-            <label htmlFor="initial_date" className="register-icon"></label>
+            <label htmlFor="initialDate" className="register-icon"></label>
             <input
               type="date"
-              name="initial_date"
-              id="initial_date"
+              name="initialDate"
+              id="initialDate"
               min={this.today}
               onChange={this.handleChange}
+              value={this.state.initialDate}
               autoFocus
             />
           </div>
           <div className="header-input-container final-date">
             <i className="material-icons">exit_to_app</i>
-            <label htmlFor="final_date"></label>
+            <label htmlFor="finalDate"></label>
             <input
               type="date"
-              name="final_date"
-              id="final_date"
+              name="finalDate"
+              id="finalDate"
               onChange={this.handleChange}
+              value={this.state.finalDate}
             />
           </div>
           <div className="header-input-container search">
@@ -54,6 +63,7 @@ export default class Search extends Component {
               minLength="3"
               maxLength="60"
               onChange={this.handleChange}
+              value={this.state.search}
             />
           </div>
           <div className="header-input-container country">
@@ -64,6 +74,7 @@ export default class Search extends Component {
               id="country"
               className="select-country"
               onChange={this.handleChange}
+              value={this.state.country}
             >
               <option value="Colombia">Colombia</option>
               <option value="Peru">Peru</option>
@@ -79,6 +90,7 @@ export default class Search extends Component {
               id="price"
               className="select-price"
               onChange={this.handleChange}
+              value={this.state.price}
             >
               <option value="1">$</option>
               <option value="2">$$</option>
