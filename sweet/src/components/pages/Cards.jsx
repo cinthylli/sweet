@@ -15,7 +15,6 @@ export default class Cards extends Component {
     console.log(this.data);
     return (
       <>
-        <h1>Hoteles</h1>
         <main className="cards-container">
           {data.map((hotel) => {
             return (

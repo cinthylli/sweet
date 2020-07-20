@@ -50,7 +50,7 @@ p {
 .card-container::after {
   position: absolute;
   top: 2px;
-  left: 0px;
+  left: 2px;
   content: " ";
   background: red;
   width: 99%;
@@ -88,8 +88,8 @@ p {
   /*Chrome10-25,Safari5.1-6*/
   background: linear-gradient(to bottom, #f27121, #e94057, #8a2387);
   /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
   z-index: -100;
 }
 .card-subtitle span {
