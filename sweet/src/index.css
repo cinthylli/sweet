@@ -1,9 +1,9 @@
 body {
   margin: 0;
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: small;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,8 +20,9 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Concert One", cursive;
+  font-family: 'Roboto Condensed', sans-serif;
 }
+
 
 /* .register-icon {
   background-image: url("public/icons/ingreso30.png");

@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
 import Search from "./Search";
-import Cards from "../pages/Cards";
+// import Cards from "../pages/Cards";
+import Cards from "../pages/CardsHooks";
 import "../../styles/home.css";
 import Curves from "../generales/Curves";
 
 export default class Home extends Component {
   state = {
     form: {
-      initialDate: new Date(),
+      initialDate: "",
       initialDateHumanReadable: "",
       finalDate: "",
       finalDateHumanReadable: "",
@@ -31,10 +32,6 @@ export default class Home extends Component {
       "es-ES",
       this.options
     );
-
-    console.log(initialDateHumanReadable);
-
-    console.log(initialDateHumanReadable);
   }
 
   handleChange = (e) => {
@@ -62,7 +59,7 @@ export default class Home extends Component {
             : null}
         </p>
         <Search onChange={this.handleChange} formValues={this.state.form} />
-        <Cards />
+        <Cards formValues={this.state.form} />
         <Footer />
       </div>
     );
