@@ -16,6 +16,7 @@ export default class Home extends Component {
       country: "",
       price: "",
       search: "",
+      message: ""
     },
   };
 
@@ -43,6 +44,13 @@ export default class Home extends Component {
     });
   };
 
+  handleMessage = (nuevoMensaje) => {
+    this.setState({
+      message: nuevoMensaje,
+
+    })
+  }
+
   render() {
     return (
       <div>
@@ -50,7 +58,7 @@ export default class Home extends Component {
         <h1 className="tracking-in-expand-fwd home-title">Sweet Travel</h1>
         <p className="home-subtitle">
           {this.state.form.initialDate !== "" &&
-          this.state.form.finalDate !== ""
+            this.state.form.finalDate !== ""
             ? `Prepárate para disfrutar de los mejores hoteles entre el ${this.state.form.initialDate} y el ${this.state.form.finalDate}.`
             : null}
           <br />
@@ -59,7 +67,7 @@ export default class Home extends Component {
             : null}
         </p>
         <Search onChange={this.handleChange} formValues={this.state.form} />
-        <Cards formValues={this.state.form} />
+        <Cards onChange={this.handleMessage} formValues={this.state.form} />
         <Footer />
       </div>
     );
