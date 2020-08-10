@@ -1,13 +1,6 @@
 import React, { Component } from "react";
-import Split from "../generales/Split";
-// import "../../styles/search.css"
 
 export default class Search extends Component {
-  initialDateControl = () => {
-    let dateInput = document.getElementById("initial_date");
-
-    console.log(dateInput);
-  };
 
   render() {
 
@@ -23,8 +16,9 @@ export default class Search extends Component {
               className="select-country"
               onChange={this.props.onChange}
               value={this.props.formValues.country}
+              placeholder="pais"
             >
-              <option value="Colombia">Colombia</option>
+             
               <option value="Peru">Peru</option>
               <option value="Argentina">Argentina</option>
               <option value="Brasil">Brasil</option>
@@ -85,7 +79,6 @@ export default class Search extends Component {
               value={this.props.formValues.search}
             />
           </div>
-        
         </form>
       </section>
     );

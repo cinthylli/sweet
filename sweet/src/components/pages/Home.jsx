@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
 import Search from "./Search";
-// import Cards from "../pages/Cards";
 import Cards from "../pages/CardsHooks";
 import "../../styles/home.css";
 import Curves from "../generales/Curves";
@@ -10,29 +9,17 @@ export default class Home extends Component {
   state = {
     form: {
       initialDate: "",
-      initialDateHumanReadable: "",
       finalDate: "",
-      finalDateHumanReadable: "",
       country: "",
       price: "",
       search: "",
-      message: ""
     },
   };
 
-  options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-
-  componentDidUpdate(prevState, prevProps) {
-    let fecha = new Date();
-    let initialDateHumanReadable = fecha.toLocaleDateString(
-      "es-ES",
-      this.options
-    );
+  formatDate = (date) => {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
+    let d = new Date(date).toLocaleString("es-CO", options);
+    return d
   }
 
   handleChange = (e) => {
@@ -44,13 +31,6 @@ export default class Home extends Component {
     });
   };
 
-  handleMessage = (nuevoMensaje) => {
-    this.setState({
-      message: nuevoMensaje,
-
-    })
-  }
-
   render() {
     return (
       <div>
@@ -59,7 +39,7 @@ export default class Home extends Component {
         <p className="home-subtitle">
           {this.state.form.initialDate !== "" &&
             this.state.form.finalDate !== ""
-            ? `Prepárate para disfrutar de los mejores hoteles entre el ${this.state.form.initialDate} y el ${this.state.form.finalDate}.`
+            ? `Prepárate para disfrutar de los mejores hoteles entre el ${this.formatDate(new Date(this.state.form.initialDate))} y el ${this.formatDate(new Date(this.state.form.finalDate))}.`
             : null}
           <br />
           {this.state.form.country !== ""
@@ -67,7 +47,7 @@ export default class Home extends Component {
             : null}
         </p>
         <Search onChange={this.handleChange} formValues={this.state.form} />
-        <Cards onChange={this.handleMessage} formValues={this.state.form} />
+        <Cards formValues={this.state.form} />
         <Footer />
       </div>
     );

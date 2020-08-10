@@ -12,7 +12,6 @@ export default class Cards extends Component {
     };
   }
   render() {
-    console.log(this.data);
     return (
       <>
         <main className="cards-container">
@@ -38,3 +37,4 @@ export default class Cards extends Component {
     );
   }
 }
+

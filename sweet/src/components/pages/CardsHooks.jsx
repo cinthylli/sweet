@@ -33,6 +33,8 @@ export default function CardsList(props) {
 
     if (initialDateInMiliseconds <= yesterdayInMiliseconds || finalDateInMilisenconds <= yesterdayInMiliseconds) {
       message = message.concat("Por favor selecciona una fecha futura.");
+      console.log("Por favor selecciona una fecha futura.");
+
       console.log(message);
     }
     else if (initialDateInMiliseconds <= finalDateInMilisenconds) {
@@ -44,6 +46,7 @@ export default function CardsList(props) {
       });
     } else {
       message = message.concat("La fecha inicial es mayor a la fecha final. Por favor ajusta la busqueda");
+
     }
   }
   console.log("fechas:", filteredCards)
@@ -59,32 +62,37 @@ export default function CardsList(props) {
   if (query.country === "" && query.price === "" && query.initialDate === "" && query.finalDate === "" && query.search === "") {
     filteredCards = data;
     message = message.concat("Busca en nuestra pagina el lugar perfecto para tus proximas vacaciones.");
+
   } else {
     if (filteredCards.length === 0) {
       message = message.concat("No hay hoteles disponibles con dicha busqueda");
+
     }
   }
 
-  props.onChange(message);
+
 
   return (
     <>
+      <h2>{message}</h2>
       <main className="cards-container">
         {filteredCards.map((hotel) => {
           return (
-            <Card
-              className="item"
-              title={hotel.name}
-              image={hotel.photo}
-              subtitle={hotel.city}
-              subtitle2={hotel.country}
-              description={hotel.description}
-              icon1="king_bed"
-              qty_icon1={hotel.rooms}
-              icon2="monetization_on"
-              qty_icon2={hotel.price}
-              key={uuid()}
-            />
+            <>
+              <Card
+                className="item"
+                title={hotel.name}
+                image={hotel.photo}
+                subtitle={hotel.city}
+                subtitle2={hotel.country}
+                description={hotel.description}
+                icon1="king_bed"
+                qty_icon1={hotel.rooms}
+                icon2="monetization_on"
+                qty_icon2={hotel.price}
+                key={uuid()}
+              />
+            </>
           );
         })}
       </main>
@@ -99,3 +107,4 @@ CardsList.prototypes = {
   finalDate: PropTypes.string,
   search: PropTypes.string,
 }
+

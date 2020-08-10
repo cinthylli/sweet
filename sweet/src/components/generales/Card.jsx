@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/card.css";
+import PropTypes from 'prop-types';
+
 export default function Card(props) {
   return (
     <article className="card-container">
@@ -39,4 +41,12 @@ export default function Card(props) {
       </div>
     </article>
   );
+}
+
+Card.propType = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+  subtitle: PropTypes.string,
+  subtitle2: PropTypes.string,
+  description: PropTypes.string
 }
