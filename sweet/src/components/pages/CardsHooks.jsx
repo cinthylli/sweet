@@ -28,14 +28,10 @@ export default function CardsList(props) {
     });
   }
 
-  console.log("price:", filteredCards)
   if (query.initialDate !== "" || query.finalDate !== "") {
 
     if (initialDateInMiliseconds <= yesterdayInMiliseconds || finalDateInMilisenconds <= yesterdayInMiliseconds) {
       message = message.concat("Por favor selecciona una fecha futura.");
-      console.log("Por favor selecciona una fecha futura.");
-
-      console.log(message);
     }
     else if (initialDateInMiliseconds <= finalDateInMilisenconds) {
       filteredCards = filteredCards.filter((hotel) => {
@@ -45,11 +41,9 @@ export default function CardsList(props) {
         );
       });
     } else {
-      message = message.concat("La fecha inicial es mayor a la fecha final. Por favor ajusta la busqueda");
-
+      message = message.concat("La fecha inicial es mayor a la fecha final. Por favor ajusta la búsqueda.");
     }
   }
-  console.log("fechas:", filteredCards)
 
   if (query.search !== "") {
     filteredCards = filteredCards.filter((hotel) => {
@@ -61,20 +55,16 @@ export default function CardsList(props) {
 
   if (query.country === "" && query.price === "" && query.initialDate === "" && query.finalDate === "" && query.search === "") {
     filteredCards = data;
-    message = message.concat("Busca en nuestra pagina el lugar perfecto para tus proximas vacaciones.");
-
+    message = message.concat("Busca en nuestra página el lugar perfecto para tus próximas vacaciones.");
   } else {
     if (filteredCards.length === 0) {
-      message = message.concat("No hay hoteles disponibles con dicha busqueda");
-
+      message = message.concat("No hay hoteles disponibles con dicha búsqueda.");
     }
   }
 
-
-
   return (
     <>
-      <h2>{message}</h2>
+      <h2 className="message">{message}</h2>
       <main className="cards-container">
         {filteredCards.map((hotel) => {
           return (

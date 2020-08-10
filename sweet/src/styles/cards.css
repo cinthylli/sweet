@@ -1,7 +1,12 @@
+
 main {
   margin: 0.8em 5em;
 }
 
+h2.message {
+  color:#4e4b4e;
+  font-size: medium;
+}
 .cards-container {
   display: flex;
   flex-wrap: wrap;
