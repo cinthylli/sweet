@@ -34,9 +34,9 @@ export default function Card(props) {
           <i className="material-icons">{props.icon2 || "exit_to_app"}</i>{" "}
           <span>{props.qty_icon2 === 1 ? ' $ ' : props.qty_icon2 === 2 ? '$$' : props.qty_icon2 === 3 ? '$$$' : "$$$$" || '  '}</span>
         </div>
-        <div className="card-title">
+        {/* <div className="card-title">
           <p>{`${new Date(props.initialDate)} - ${new Date(props.finalDate)}`} </p>
-        </div>
+        </div> */}
         {/* <div className="card-category">
           <i className="material-icons">{props.icon3 || "exit_to_app"}</i>
           {props.qty_icon3 || "4"}
