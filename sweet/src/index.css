@@ -56,10 +56,12 @@ a {
   justify-content: center;
   align-items: center;
   min-width: 230px;
+   margin:  2% 5% ;
 }
 .header-search #form-search .header-input-container {
   /* background-color: rgba(207, 128, 38, 0.925); */
-  margin-left: 5px;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
   align-items: baseline;
   display: flex;
   flex-direction: row;
@@ -85,6 +87,7 @@ a {
   height: 40px;
   border: none;
   outline: none;
+  margin: 1%;
 }
 
 .header-input-container .search-icon {
@@ -140,7 +143,7 @@ input {
 
 .select-price {
   padding: 0 8px;
-  width: 70px;
+  width:72px;
   background-color: transparent;
   font-family: "Roboto Condensed", sans-serif;
   color: #746574;

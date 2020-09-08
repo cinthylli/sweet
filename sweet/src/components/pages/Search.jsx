@@ -18,8 +18,8 @@ export default class Search extends Component {
               value={this.props.formValues.country}
               placeholder="pais"
             >
-             
-              <option value="Peru">Peru</option>
+              <option value="">Paises</option>
+              <option value="Uruguay">Uruguay</option>
               <option value="Argentina">Argentina</option>
               <option value="Brasil">Brasil</option>
             </select>
@@ -34,6 +34,7 @@ export default class Search extends Component {
               onChange={this.props.onChange}
               value={this.props.formValues.price}
             >
+              <option value="0">Precio</option>
               <option value="1">$</option>
               <option value="2">$$</option>
               <option value="3">$$$</option>

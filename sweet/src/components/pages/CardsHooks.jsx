@@ -7,41 +7,69 @@ import { v4 as uuid } from "uuid";
 
 export default function CardsList(props) {
   const query = props.formValues;
-  console.log(query);
   let filteredCards = data;
+  let recommendedCards;
   let initialDateInMiliseconds = Date.parse(query.initialDate);
   let finalDateInMilisenconds = Date.parse(query.finalDate);
-  let aDayInMiliseconds = 86400000;
-  let yesterdayInMiliseconds = new Date().getTime - aDayInMiliseconds;
+
   let message = "";
   // Para disminuir la cantidad de elementos la busqueda ira de pais-> precio -> fechas
 
-  if (query.country !== "") {
+  if (query.country !== "Paises" || query.country !== "") {
     filteredCards = filteredCards.filter((hotel) => {
       return hotel.country.toLowerCase().includes(query.country.toLowerCase());
     })
+    if (filteredCards.length > 0) {
+      if (filteredCards.length > 3) {
+        recommendedCards = filteredCards.slice(0, 3);
+      } else {
+        recommendedCards = filteredCards.slice(0, filteredCards.length);
+      }
+    }
   }
 
-  if (query.price !== "") {
+  if (query.price !== "" || query.price !== 0) {
     filteredCards = filteredCards.filter((hotel) => {
       return hotel.price.toString().includes(query.price);
     });
+    if (filteredCards.length > 0) {
+      if (filteredCards.length > 3) {
+        recommendedCards.push(...filteredCards.slice(0, 3));
+      } else {
+        recommendedCards.push(...filteredCards.slice(0, filteredCards.length));
+      }
+    }
   }
 
   if (query.initialDate !== "" || query.finalDate !== "") {
-
-    if (initialDateInMiliseconds <= yesterdayInMiliseconds || finalDateInMilisenconds <= yesterdayInMiliseconds) {
+    if (query.initialDate === query.finalDate) {
       message = message.concat("Por favor selecciona una fecha futura.");
     }
-    else if (initialDateInMiliseconds <= finalDateInMilisenconds) {
+    else if (query.initialDate <= query.finalDate) {
+      initialDateInMiliseconds = Date.parse(query.initialDate);
+      finalDateInMilisenconds = Date.parse(query.finalDate);
+
       filteredCards = filteredCards.filter((hotel) => {
         return (
           hotel.availabilityFrom <= initialDateInMiliseconds &&
-          hotel.availabilityTo <= finalDateInMilisenconds
+          hotel.availabilityTo >= finalDateInMilisenconds
         );
+
       });
+      if (filteredCards.length > 0) {
+        if (filteredCards.length > 3) {
+          recommendedCards.push(...filteredCards.slice(0, 3));
+        } else {
+          recommendedCards.push(...filteredCards.slice(0, filteredCards.length));
+        }
+      }
     } else {
-      message = message.concat("La fecha inicial es mayor a la fecha final. Por favor ajusta la búsqueda.");
+      if (query.finalDate === "") {
+        message = message.concat("La  fecha final no ha sido incluida. Por favor seleccionala para continuar con la búsqueda.");
+      } else {
+        message = message.concat("La fecha inicial es mayor a la fecha final. Por favor ajusta la búsqueda.");
+
+      }
     }
   }
 
@@ -51,17 +79,24 @@ export default function CardsList(props) {
         .toLowerCase()
         .includes(query.search.toLowerCase());
     });
+    if (filteredCards.length > 0) {
+      if (filteredCards.length > 3) {
+        recommendedCards.push(...filteredCards.slice(0, 3));
+      } else {
+        recommendedCards.push(...filteredCards.slice(0, filteredCards.length));
+      }
+    }
   }
 
-  if (query.country === "" && query.price === "" && query.initialDate === "" && query.finalDate === "" && query.search === "") {
+  if (query.country === "Paises" && query.price === "" && query.initialDate === "" && query.finalDate === "" && query.search === "") {
     filteredCards = data;
     message = message.concat("Busca en nuestra página el lugar perfecto para tus próximas vacaciones.");
   } else {
     if (filteredCards.length === 0) {
-      message = message.concat("No hay hoteles disponibles con dicha búsqueda.");
+      message = message.concat("No hay hoteles disponibles con dicha búsqueda. Pero de acuerdo a tus elecciones, te recomendamos algunos lugares que te podrían encantar ");
+      filteredCards = recommendedCards;
     }
   }
-
   return (
     <>
       <h2 className="message">{message}</h2>
@@ -76,6 +111,8 @@ export default function CardsList(props) {
                 subtitle={hotel.city}
                 subtitle2={hotel.country}
                 description={hotel.description}
+                initialDate={hotel.availabilityFrom}
+                finalDate={hotel.availabilityTo}
                 icon1="king_bed"
                 qty_icon1={hotel.rooms}
                 icon2="monetization_on"
